@@ -7,12 +7,12 @@
       name: git
       state: present
 
-  - name:
+  - name: install tree
     apt:
       name: tree
       state: present
 
-  - name:
+  - name: install wget
     apt:
       name: wget
       state: present 
