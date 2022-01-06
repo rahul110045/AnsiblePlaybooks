@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   tasks:
-  - name: I want to unisntall webserver
+  - name: I want to isntall webserver
     apt:
       name: apache2
-      state: absent
+      state: present
