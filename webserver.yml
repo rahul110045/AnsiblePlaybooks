@@ -3,5 +3,5 @@
   tasks:
   - name: I want to isntall webserver
     apt:
-      name: tomcat
+      name: nginx
       state: present
