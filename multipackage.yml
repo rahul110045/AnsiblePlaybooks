@@ -2,23 +2,11 @@
 - hosts: all
   become: yes
   tasks:
-  - name: install git
+  - name: I want to install git, tree, wget by using same tasks
     apt:
-      name: git
+      name: 
       state: present
-
-  - name: install tree
-    apt:
-      name: tree
-      state: absent
-
-  - name: install wget
-    apt:
-      name: wget
-      state: absent 
-
-  - name: install apache2
-    apt: 
-      name: apache2
-      state: absent
-
+    loop:
+      - git
+      - tree
+      - wget
