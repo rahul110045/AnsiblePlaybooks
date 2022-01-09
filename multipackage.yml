@@ -5,7 +5,7 @@
   - name: I want to install git, tree, wget by using same tasks
     apt:
       name: "{{item}}"
-      state: present
+      state: absent
     loop: 
       - git
       - tree
