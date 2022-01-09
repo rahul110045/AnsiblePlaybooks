@@ -12,4 +12,16 @@
     service:
       name: apache2
       state: started
-    when: ansible_os_family=="Redhat"
+    when: ansible_os_family=="Debian"
+
+  - name: install apache 2 on redhat
+      yum:
+        name: apache2
+        state: present
+    when: ansible_os_family=="RedHat"
+
+  - name: start apache on redhat
+      service:
+        name: apache2
+        state: started
+    when: ansible_os_family=="RedHat"
