@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: web_server
   become: yes
   tasks:
   - name: I want to isntall webserver when os family is debian
@@ -24,4 +24,24 @@
     service:
       name: httpd
       state: started
+    when: ansible_os_family=="RedHat"
+
+
+- hosts: ubuntu_server
+  become: yes
+  tasks:
+  - name: I want to isntall git when os family is debian
+    apt:
+      name: git
+      state: present
+    when: ansible_os_family=="Debian"
+
+
+- hosts: redhat_server
+  become: yes
+  tasks:
+  - name: I want to isntall httpd when os family is debian
+    apt:
+      name: httpd
+      state: present
     when: ansible_os_family=="RedHat"
