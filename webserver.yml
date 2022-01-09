@@ -14,14 +14,14 @@
       state: started
     when: ansible_os_family=="Debian"
 
-  - name: install apache 2 on redhat
+  - name: install httpd on redhat
     yum:
-      name: apache2
+      name: httpd
       state: present
     when: ansible_os_family=="RedHat"
 
-  - name: start apache on redhat
+  - name: start httpd on redhat
     service:
-      name: apache2
+      name: httpd
       state: started
     when: ansible_os_family=="RedHat"
