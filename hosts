@@ -1,10 +1,10 @@
 [web_server]
 # Ubuntu Node 1
-172.31.36.242
+172.31.47.96
 # Ubuntu Node 2
-#172.31.46.97
+172.31.47.35
 # RedHat Node 1
-172.31.24.171
+172.31.35.127
 
 
 [ubuntu_server]
